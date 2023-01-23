@@ -3,8 +3,8 @@ import Bouncingword from "../Components/Bouncingword";
 import Scrollbounce from "../Components/ScrollBouce";
 
 const Home = (props) => {
-
-  const bannerTextClass = "hover:text-[#14d9d8] drop-shadow-[1px_1px_50px_rgba(20,217,216,0.5)]"
+  const bannerTextClass =
+    "hover:text-[#14d9d8] drop-shadow-[1px_1px_50px_rgba(20,217,216,0.5)]";
 
   const textBounce = (e) => {
     e.target.classList.add("blast");
@@ -15,7 +15,11 @@ const Home = (props) => {
 
   return (
     <section className="w-full h-screen relative">
-      <span className={`fixed bottom-4 ${props.open === true ? "left-32" : "left-0"}`}>
+      <span
+        className={`fixed bottom-4 ${
+          props.open === true ? "left-36" : "left-0"
+        } md:left-36`}
+      >
         <Scrollbounce text="Scroll Down" textClass="text-white" />
       </span>
       <span className="fixed bottom-4 right-0">
@@ -23,11 +27,22 @@ const Home = (props) => {
       </span>
       <img
         src="./static/images/logo-light.png"
+        alt="AMAN"
         className="absolute top-5 right-3 sm:right-10 w-40"
       />
-      <div className="w-full h-full flex items-center">
-        <div className="sm:w-2/3 flex flex-col justify-around ml-5 sm:ml-10 md:ml-20">
-          <h1 className="text-slate-50 text-[35px] sm:text-[60px] md:text-[80px] sm:leading-[60px] leading-[30px] md:leading-[80px] font-paytone my-1.5 font-thin flex">
+      <div className="w-full h-full flex items-center anim-bg">
+        <div className="light x1"></div>
+        <div className="light x2"></div>
+        <div className="light x3"></div>
+        <div className="light x4"></div>
+        <div className="light x5"></div>
+        <div className="light x6"></div>
+        <div className="light x7"></div>
+        <div className="light x8"></div>
+        <div className="light x9"></div>
+
+        <div className="sm:w-2/3 w-full flex flex-col justify-around ml-5 sm:ml-10 md:ml-20 items-center sm:items-start">
+          <h1 className="text-slate-50 text-[55px] sm:text-[60px] md:text-[80px] sm:leading-[60px] leading-[45px] md:leading-[80px] font-paytone my-1.5 font-thin flex">
             <Bouncingword
               text="H"
               textClass={`${bannerTextClass}`}
@@ -57,7 +72,7 @@ const Home = (props) => {
               }}
             />
           </h1>
-          <h1 className="text-slate-50 text-[35px] sm:text-[60px] md:text-[80px] sm:leading-[60px] leading-[30px] md:leading-[80px] font-paytone my-1.5 font-thin flex">
+          <h1 className="text-slate-50 text-[55px] sm:text-[60px] md:text-[80px] sm:leading-[60px] leading-[45px] md:leading-[80px] font-paytone my-1.5 font-thin flex">
             <Bouncingword
               text="I"
               textClass={`${bannerTextClass}`}
@@ -115,7 +130,7 @@ const Home = (props) => {
               }}
             />
           </h1>
-          <h1 className="text-slate-50 text-[35px] sm:text-[60px] md:text-[80px] sm:leading-[60px] leading-[30px] md:leading-[80px] font-paytone my-1.5 font-thin flex">
+          <h1 className="text-slate-50 text-[55px] sm:text-[60px] md:text-[80px] sm:leading-[60px] leading-[45px] md:leading-[80px] font-paytone my-1.5 font-thin flex">
             <Bouncingword
               text="W"
               textClass={`${bannerTextClass}`}
