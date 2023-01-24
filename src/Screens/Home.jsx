@@ -3,6 +3,9 @@ import Bouncingword from "../Components/Bouncingword";
 import Scrollbounce from "../Components/ScrollBouce";
 
 const Home = (props) => {
+
+  const bannerTextClass = "hover:text-[#14d9d8] drop-shadow-[1px_1px_50px_rgba(20,217,216,0.5)]"
+
   const textBounce = (e) => {
     e.target.classList.add("blast");
     setTimeout(() => {
@@ -20,35 +23,35 @@ const Home = (props) => {
       </span>
       <img
         src="./static/images/logo-light.png"
-        className="absolute top-5 right-10 w-40"
+        className="absolute top-5 right-3 sm:right-10 w-40"
       />
       <div className="w-full h-full flex items-center">
         <div className="sm:w-2/3 flex flex-col justify-around ml-5 sm:ml-10 md:ml-20">
           <h1 className="text-slate-50 text-[35px] sm:text-[60px] md:text-[80px] sm:leading-[60px] leading-[30px] md:leading-[80px] font-paytone my-1.5 font-thin flex">
             <Bouncingword
               text="H"
-              textClass="hover:text-[#14d9d8]"
+              textClass={`${bannerTextClass}`}
               onMouseEnter={(e) => {
                 textBounce(e);
               }}
             />
             <Bouncingword
               text="e"
-              textClass="hover:text-[#14d9d8]"
+              textClass={`${bannerTextClass}`}
               onMouseEnter={(e) => {
                 textBounce(e);
               }}
             />
             <Bouncingword
               text="y"
-              textClass="hover:text-[#14d9d8]"
+              textClass={`${bannerTextClass}`}
               onMouseEnter={(e) => {
                 textBounce(e);
               }}
             />
             <Bouncingword
               text=","
-              textClass="hover:text-[#14d9d8]"
+              textClass={`${bannerTextClass}`}
               onMouseEnter={(e) => {
                 textBounce(e);
               }}
@@ -57,56 +60,56 @@ const Home = (props) => {
           <h1 className="text-slate-50 text-[35px] sm:text-[60px] md:text-[80px] sm:leading-[60px] leading-[30px] md:leading-[80px] font-paytone my-1.5 font-thin flex">
             <Bouncingword
               text="I"
-              textClass="hover:text-[#14d9d8]"
+              textClass={`${bannerTextClass}`}
               onMouseEnter={(e) => {
                 textBounce(e);
               }}
             />
             <Bouncingword
               text="'"
-              textClass="hover:text-[#14d9d8]"
+              textClass={`${bannerTextClass}`}
               onMouseEnter={(e) => {
                 textBounce(e);
               }}
             />
             <Bouncingword
               text="m"
-              textClass="hover:text-[#14d9d8]"
+              textClass={`${bannerTextClass}`}
               onMouseEnter={(e) => {
                 textBounce(e);
               }}
             />
             <Bouncingword
               text="A"
-              textClass="hover:text-[#14d9d8] ml-4"
+              textClass="hover:text-[#14d9d8] ml-4 drop-shadow-[0_35px_35px_rgba(20,217,216,0.5)]"
               onMouseEnter={(e) => {
                 textBounce(e);
               }}
             />
             <Bouncingword
               text="m"
-              textClass="hover:text-[#14d9d8]"
+              textClass={`${bannerTextClass}`}
               onMouseEnter={(e) => {
                 textBounce(e);
               }}
             />
             <Bouncingword
               text="a"
-              textClass="hover:text-[#14d9d8]"
+              textClass={`${bannerTextClass}`}
               onMouseEnter={(e) => {
                 textBounce(e);
               }}
             />
             <Bouncingword
               text="n"
-              textClass="hover:text-[#14d9d8]"
+              textClass={`${bannerTextClass}`}
               onMouseEnter={(e) => {
                 textBounce(e);
               }}
             />
             <Bouncingword
               text=","
-              textClass="hover:text-[#14d9d8]"
+              textClass={`${bannerTextClass}`}
               onMouseEnter={(e) => {
                 textBounce(e);
               }}
@@ -115,84 +118,84 @@ const Home = (props) => {
           <h1 className="text-slate-50 text-[35px] sm:text-[60px] md:text-[80px] sm:leading-[60px] leading-[30px] md:leading-[80px] font-paytone my-1.5 font-thin flex">
             <Bouncingword
               text="W"
-              textClass="hover:text-[#14d9d8]"
+              textClass={`${bannerTextClass}`}
               onMouseEnter={(e) => {
                 textBounce(e);
               }}
             />
             <Bouncingword
               text="e"
-              textClass="hover:text-[#14d9d8]"
+              textClass={`${bannerTextClass}`}
               onMouseEnter={(e) => {
                 textBounce(e);
               }}
             />
             <Bouncingword
               text="b"
-              textClass="hover:text-[#14d9d8]"
+              textClass={`${bannerTextClass}`}
               onMouseEnter={(e) => {
                 textBounce(e);
               }}
             />
             <Bouncingword
               text="D"
-              textClass="hover:text-[#14d9d8] ml-4"
+              textClass={`${bannerTextClass} ml-4`}
               onMouseEnter={(e) => {
                 textBounce(e);
               }}
             />
             <Bouncingword
               text="e"
-              textClass="hover:text-[#14d9d8]"
+              textClass={`${bannerTextClass}`}
               onMouseEnter={(e) => {
                 textBounce(e);
               }}
             />
             <Bouncingword
               text="v"
-              textClass="hover:text-[#14d9d8]"
+              textClass={`${bannerTextClass}`}
               onMouseEnter={(e) => {
                 textBounce(e);
               }}
             />
             <Bouncingword
               text="e"
-              textClass="hover:text-[#14d9d8]"
+              textClass={`${bannerTextClass}`}
               onMouseEnter={(e) => {
                 textBounce(e);
               }}
             />
             <Bouncingword
               text="l"
-              textClass="hover:text-[#14d9d8]"
+              textClass={`${bannerTextClass}`}
               onMouseEnter={(e) => {
                 textBounce(e);
               }}
             />
             <Bouncingword
               text="o"
-              textClass="hover:text-[#14d9d8]"
+              textClass={`${bannerTextClass}`}
               onMouseEnter={(e) => {
                 textBounce(e);
               }}
             />
             <Bouncingword
               text="p"
-              textClass="hover:text-[#14d9d8]"
+              textClass={`${bannerTextClass}`}
               onMouseEnter={(e) => {
                 textBounce(e);
               }}
             />
             <Bouncingword
               text="e"
-              textClass="hover:text-[#14d9d8]"
+              textClass={`${bannerTextClass}`}
               onMouseEnter={(e) => {
                 textBounce(e);
               }}
             />
             <Bouncingword
               text="r"
-              textClass="hover:text-[#14d9d8]"
+              textClass={`${bannerTextClass}`}
               onMouseEnter={(e) => {
                 textBounce(e);
               }}

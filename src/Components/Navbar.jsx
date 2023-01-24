@@ -9,7 +9,7 @@ const Navbar = (props) => {
     <nav className="w-[140px] h-screen z-50 relative">
       <div
         className={`absolute top-6 p-3 cursor-pointer z-50 lg:hidden ${
-          props.open === true ? "left-40" : "left-48"
+          props.open === true ? "left-36" : "left-[168px]"
         }`}
       >
         <BsArrowRightCircle
