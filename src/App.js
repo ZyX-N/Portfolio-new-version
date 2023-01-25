@@ -15,7 +15,7 @@ function App() {
           <Navbar open={navOpen} setOpen={setNavOpen} />
         </div>
           {/* #000428 -> #004e92 */}
-        <div className="w-full lg:w-[calc(100vw-140px)] bg-[#1d1d1d] ml-auto min-h-screen relative">
+        <div className="w-full lg:w-[calc(100vw-140px)] bg-[#1d1d1d] ml-auto min-h-screen relative overflow-hidden">
           <Routes>
             <Route path="/" element={<Home open={navOpen} />} />
           </Routes>
