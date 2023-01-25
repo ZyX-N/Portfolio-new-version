@@ -21,6 +21,12 @@ module.exports = {
       },
       dropShadow: {
         '3xl': '0 35px 35px rgba(0, 0, 0, 0.25)',
+      },
+      screens: {
+        'smallmobile': '400px',
+      },
+      minHeight: {
+        '1/2': '50%',
       }
     },
   },
