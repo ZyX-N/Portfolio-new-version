@@ -2,6 +2,7 @@ import { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
 import Navbar from "./Components/Navbar";
+import About from "./Screens/About";
 import Home from "./Screens/Home";
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <div className="w-full lg:w-[calc(100vw-140px)] bg-[#1d1d1d] ml-auto min-h-screen relative overflow-hidden">
           <Routes>
             <Route path="/" element={<Home open={navOpen} />} />
+            <Route path="/about" element={<About />} />
           </Routes>
         </div>
       </div>
