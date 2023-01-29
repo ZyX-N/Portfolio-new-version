@@ -7,12 +7,12 @@ import { Link } from "react-router-dom";
 const Navbar = (props) => {
 
   const navigators = [
-    {text:"About",href:"/about",current:false},
-    {text:"My Skill",href:"/skill",current:false},
-    {text:"Work",href:"/work",current:false},
-    {text:"Contact",href:"/contact",current:false},
-    {text:"Blog",href:"/blog",current:false},
-  ]
+    {text:"About",href:"/about"},
+    {text:"My Skill",href:"/skill"},
+    {text:"Work",href:"/work"},
+    {text:"Contact",href:"/contact"},
+    {text:"Blog",href:"/blog"},
+  ];
 
   return (
     <nav className="w-[140px] h-screen z-50 relative">
@@ -30,21 +30,16 @@ const Navbar = (props) => {
           }}
         />
       </div>
-      <div className="w-full h-1/5 bg-[#000000] flex flex-col items-center justify-around pb-4">
+      <Link to={"/"} className="w-full h-1/5 bg-[#000000] flex flex-col items-center justify-around pb-4">
         <img src="./static/images/logo-light.png" alt="AMAN" className="mt-5" />
         <h1 className="text-gray-400 font-light"> Web Developer </h1>
-      </div>
+      </Link>
       <div className="w-full h-4/5 bg-[#181818] pt-14">
         <ul className="w-full flex flex-col">
-          {navigators.map((item)=>(
-          <li className="w-full py-3.5 border-y border-gray-700 flex justify-center font-hind">
-            <Link
-              to={{ pathname: `${item.href}` }}
-              className="text-gray-400 text-lg hover:text-[#14d9d8]"
-            >
+          {navigators.map((item,index)=>(
+          <Link to={{ pathname: `${item.href}` }} key={index} className={`w-full py-3.5 ${index !== 4 && "border-t"} ${index === 4 && "border-y"} ${index.href === window.location.pathname ? "text-[#14d9d8]" : "text-gray-400"} border-gray-700 flex justify-center font-hind text-lg hover:text-[#14d9d8]`}>
               {item.text}
-            </Link>
-          </li>
+          </Link>
 ))}
         </ul>
         <div className="flex flex-wrap mt-16 w-full justify-center text-gray-400">

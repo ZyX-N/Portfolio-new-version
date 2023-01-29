@@ -4,6 +4,7 @@ import "./App.css";
 import Navbar from "./Components/Navbar";
 import About from "./Screens/About";
 import Home from "./Screens/Home";
+import Skill from "./Screens/Skill";
 
 function App() {
 
@@ -17,9 +18,15 @@ function App() {
         </div>
           {/* #000428 -> #004e92 */}
         <div className="w-full lg:w-[calc(100vw-140px)] bg-[#1d1d1d] ml-auto min-h-screen relative overflow-hidden">
+        <img
+            src="./static/images/logo-light.png"
+            alt="AMAN"
+            className="absolute top-5 right-3 sm:right-10 w-40"
+          />
           <Routes>
             <Route path="/" element={<Home open={navOpen} />} />
             <Route path="/about" element={<About />} />
+            <Route path="/skill" element={<Skill />} />
           </Routes>
         </div>
       </div>

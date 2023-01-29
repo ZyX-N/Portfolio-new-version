@@ -27,6 +27,18 @@ module.exports = {
       },
       minHeight: {
         '1/2': '50%',
+      },
+      letterSpacing: {
+        tightest: '2px',
+      },
+      animation: {
+        wiggle: 'wiggle 1s ease-in-out infinite',
+      },
+      keyframes: {
+        wiggle: {
+          '0%, 100%': { margin : "0 0 0 5px" },
+          '50%': { margin : "0 0 0 10px" },
+        }
       }
     },
   },
