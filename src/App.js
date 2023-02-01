@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
 import Navbar from "./Components/Navbar";
 import About from "./Screens/About";
+import Contact from "./Screens/Contact";
 import Home from "./Screens/Home";
 import Skill from "./Screens/Skill";
 
@@ -27,6 +28,7 @@ function App() {
             <Route path="/" element={<Home open={navOpen} />} />
             <Route path="/about" element={<About />} />
             <Route path="/skill" element={<Skill />} />
+            <Route path="/contact" element={<Contact />} />
           </Routes>
         </div>
       </div>
