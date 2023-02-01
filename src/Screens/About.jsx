@@ -22,6 +22,12 @@ const About = () => {
     }, 1000);
   };
 
+  useEffect(()=>{
+    setInterval(()=>{
+      // forceUpdate()
+    },5000);
+  })
+
   return (
     <section className="w-full h-[70vh] sm:h-screen relative">
       {loading ? (
@@ -31,9 +37,9 @@ const About = () => {
           <div className="w-1/2 px-20 relative">
             <h1 className="text-[#14d9d8] text-[60px] flex font-semibold">
               {["M", "e", ",", "M", "y", "s", "e", "l", "f", "&", "I"].map(
-                (letter,index) => (
+                (letter, index) => (
                   <Bouncingword
-                  key={index}
+                    key={index}
                     text={letter}
                     textClass={`drop-shadow-[1px_1px_50px_rgba(20,217,216,0.5)] flex ${
                       letter === "&" && "mx-2"
@@ -59,10 +65,16 @@ const About = () => {
               possimus alias expedita! Placeat eligendi quam ex modi illo
               molestiae. Vel, explicabo?
             </p>
-            <Link to={"/blog"} className="text-[#14d9d8] hover:text-[15px] hover:text-[#06c2c2] absolute transition-all duration-300 flex items-center">Let’s make something special <BsArrowRight className="animate-[wiggle_1s_ease-in-out_infinite]" /> </Link>
+            <Link
+              to={"/blog"}
+              className="text-[#14d9d8] hover:text-[15px] hover:text-[#06c2c2] absolute transition-all duration-300 flex items-center"
+            >
+              Let’s make something special{" "}
+              <BsArrowRight className="animate-[wiggle_1s_ease-in-out_infinite]" />{" "}
+            </Link>
           </div>
           <div className="w-1/2">
-          
+            
           </div>
         </div>
       )}
