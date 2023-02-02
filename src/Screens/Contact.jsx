@@ -1,13 +1,22 @@
 import React, { useState, useEffect } from "react";
+import { useMemo } from "react";
+import Alert from "../Components/Alert";
 import Bouncingword from "../Components/Bouncingword";
 import Loading from "../Components/Loading";
 
 const Contact = () => {
   const [loading, setLoading] = useState(true);
+  const [alertShow, setAlertShow] = useState(false);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
+  const [errors, setErrors] = useState({
+    name: true,
+    email: true,
+    message: true,
+  });
+  const [errorText, setErrorText] = useState([]);
 
   useEffect(() => {
     setTimeout(() => {
@@ -22,14 +31,60 @@ const Contact = () => {
     }, 1000);
   };
 
+  const validation = () => {
+    let isValid = true;
+    let error = {};
+    let errorMsg = [];
+
+    if (name === "") {
+      isValid = false;
+      error.name = false;
+      errorMsg.push("What do I call you ? Enter your name please");
+    } else {
+      error.name = true;
+    }
+
+    if (email === "" || !email.includes("@")) {
+      isValid = false;
+      error.email = false;
+      errorMsg.push("How do I contact you ? Enter your email please");
+    } else {
+      error.email = true;
+    }
+
+    if (message === "") {
+      isValid = false;
+      error.message = false;
+      errorMsg.push("Give a brief description about the query or discussion");
+    } else {
+      error.message = true;
+    }
+
+    setErrorText(errorMsg);
+    setErrors(error);
+    return isValid;
+  };
+
   const contactHandler = (e) => {
     e.preventDefault();
-    console.log("Contact ==>");
-    console.log("name ==> ", name);
-    console.log("email ==> ", email);
-    console.log("subject ==> ", subject);
-    console.log("message ==> ", message);
+    if(alertShow === false){
+    if (validation()) {
+      console.log("Contact ==>");
+      console.log("name ==> ", name);
+      console.log("email ==> ", email);
+      console.log("subject ==> ", subject);
+      console.log("message ==> ", message);
+    }else{
+      setAlertShow(true);
+    }
+  }
   };
+
+  useMemo(()=>{
+    setTimeout(()=>{
+      setAlertShow(false);
+    },5000);
+  },[alertShow]);
 
   return (
     <section className="w-full h-[70vh] sm:h-screen relative">
@@ -37,6 +92,9 @@ const Contact = () => {
         <Loading />
       ) : (
         <div className="flex h-screen items-center">
+          <div className={`absolute left-[5%] shadow-2xl z-50 transition-all duration-700 ease-in-out ${alertShow === true ? "bottom-[20px]" : "-bottom-[200px]"}`}>
+            <Alert show={alertShow} message={errorText} onClick={setAlertShow} />
+          </div>
           <div className="w-1/2 px-20 relative">
             <h1 className="text-[#14d9d8] text-[60px] flex font-semibold">
               {["C", "o", "n", "t", "a", "c", "t", "M", "e"].map(
@@ -64,39 +122,68 @@ const Contact = () => {
               onSubmit={(e) => contactHandler(e)}
             >
               <div className="flex justify-between mt-4">
+                <div
+                  className={`w-full mr-1.5 relative before:content-[''] before:absolute before:w-full before:h-0.5 before:bottom-0 ${
+                    errors.name ? "before:bg-[#14d9d8]" : "before:bg-red-600"
+                  }`}
+                >
+                  <input
+                    type="text"
+                    className="px-4 py-3 bg-[#2b2b2b] w-full text-slate-50 outline-none"
+                    placeholder="Name"
+                    value={name}
+                    onInput={() => {
+                      errors.name = true;
+                    }}
+                    onChange={(e) => setName(e.target.value)}
+                  />
+                </div>
+                <div
+                  className={`w-full ml-1.5 relative before:content-[''] before:absolute before:w-full before:h-0.5 before:bottom-0 ${
+                    errors.email ? "before:bg-[#14d9d8]" : "before:bg-red-600"
+                  }`}
+                >
+                  <input
+                    type="text"
+                    className="px-4 py-3 bg-[#2b2b2b] w-full text-slate-50 outline-none"
+                    placeholder="Email"
+                    value={email}
+                    onInput={() => {
+                      errors.email = true;
+                    }}
+                    onChange={(e) => setEmail(e.target.value)}
+                  />
+                </div>
+              </div>
+              <div className="w-full mt-3 relative before:content-[''] before:absolute before:w-full before:h-0.5 before:bottom-0 before:bg-[#14d9d8]">
                 <input
                   type="text"
-                  className="px-4 py-3 bg-[#2b2b2b] w-full mr-1.5 text-slate-50 outline-none before:content-[''] before:bg-blue-600 relative before:absolute before:bottom-0 before:left-0 before:w-60 before:h-3"
-                  placeholder="Name"
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
-                />
-                <input
-                  type="text"
-                  className="px-4 py-3 bg-[#2b2b2b] w-full ml-1.5 text-slate-50 outline-none before:content-[''] before:bg-blue-600 relative before:absolute before:bottom-0 before:left-0 before:w-60 before:h-3"
-                  placeholder="Email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
+                  className=" px-4 py-3 w-full bg-[#2b2b2b] text-slate-50 outline-none"
+                  placeholder="Subject"
+                  value={subject}
+                  onChange={(e) => setSubject(e.target.value)}
                 />
               </div>
-              <input
-                type="text"
-                className="mt-3 px-4 py-3 bg-[#2b2b2b] text-slate-50 outline-none before:content-[''] before:bg-blue-600 relative before:absolute before:bottom-0 before:left-0 before:w-60 before:h-3"
-                placeholder="Subject"
-                value={subject}
-                onChange={(e) => setSubject(e.target.value)}
-              />
-              <textarea
-                cols="30"
-                rows="5"
-                className="px-4 py-3 mt-3 bg-[#2b2b2b] resize-none text-slate-50 outline-none before:content-[''] before:bg-blue-600 relative before:absolute before:bottom-0 before:left-0 before:w-60 before:h-3"
-                placeholder="Message"
-                value={message}
-                onChange={(e) => setMessage(e.target.value)}
-              ></textarea>
+              <div
+                className={`w-full mt-3 relative before:content-[''] before:absolute before:w-full before:h-0.5 before:bottom-0 ${
+                  errors.message ? "before:bg-[#14d9d8]" : "before:bg-red-600"
+                }`}
+              >
+                <textarea
+                  cols="30"
+                  rows="5"
+                  className="px-4 py-3 w-full bg-[#2b2b2b] resize-none text-slate-50 outline-none"
+                  placeholder="Message"
+                  value={message}
+                  onInput={() => {
+                    errors.message = true;
+                  }}
+                  onChange={(e) => setMessage(e.target.value)}
+                ></textarea>
+              </div>
               <button
                 type="submit"
-                className="border border-[#14d9d8] text-[#14d9d8] hover:bg-[#14d9d8] hover:text-[#2b2b2b] px-8 py-3 tracking-[3px] mt-3 ml-auto transition-all duration-300 ease-in-out"
+                className="border border-[#14d9d8] text-[#14d9d8] hover:bg-[#14d9d8] hover:text-[#2b2b2b] px-8 py-3 tracking-[3px] mt-3 ml-auto transition-all duration-300 ease-in-out drop-shadow-[1px_1px_50px_rgba(20,217,216,0.5)]"
               >
                 Send Message
               </button>
