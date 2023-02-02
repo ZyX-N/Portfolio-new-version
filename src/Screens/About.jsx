@@ -3,8 +3,25 @@ import Bouncingword from "../Components/Bouncingword";
 import Loading from "../Components/Loading";
 import { BsArrowRight } from "react-icons/bs";
 import { Link } from "react-router-dom";
+import Globe from "../Components/Globe";
 
 const About = () => {
+  
+  const skillGroup = [
+    {skill:"HTML"},
+    {skill:"CSS"},
+    {skill:"Bootstrap"},
+    {skill:"Tailwind CSS"},
+    {skill:"Javascript"},
+    {skill:"ReactJS"},
+    {skill:"NextJS"},
+    {skill:"JQuery"},
+    {skill:"NodeJS"},
+    {skill:"ExpressJS"},
+    {skill:"MySQL"},
+    {skill:"MongoDB"},
+  ];
+
   const [loading, setLoading] = useState(true);
 
   document.title = "Me, Myself & I | AV";
@@ -21,12 +38,6 @@ const About = () => {
       e.target.classList.remove("blast");
     }, 1000);
   };
-
-  useEffect(()=>{
-    setInterval(()=>{
-      // forceUpdate()
-    },5000);
-  })
 
   return (
     <section className="w-full h-[70vh] sm:h-screen relative">
@@ -74,7 +85,7 @@ const About = () => {
             </Link>
           </div>
           <div className="w-1/2">
-            
+            <Globe data={skillGroup} />
           </div>
         </div>
       )}

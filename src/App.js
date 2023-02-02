@@ -22,7 +22,7 @@ function App() {
         <img
             src="./static/images/logo-light.png"
             alt="AMAN"
-            className="absolute top-5 right-3 sm:right-10 w-40"
+            className="absolute top-5 right-3 sm:right-10 w-40 z-50"
           />
           <Routes>
             <Route path="/" element={<Home open={navOpen} />} />

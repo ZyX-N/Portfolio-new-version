@@ -40,11 +40,10 @@
 }
 
 .font-paytone {
-
   font-family: "Paytone One", serif;
 }
 
-.trackAnimation{
+.trackAnimation {
   background-color: crimson;
   padding: 30px;
   border-radius: 50%;
@@ -53,10 +52,10 @@
 }
 
 @keyframes trackShine {
-  0%{
+  0% {
     opacity: 100%;
   }
-  100%{
+  100% {
     opacity: 0%;
   }
 }
@@ -204,8 +203,7 @@
   }
 }
 
-@media only screen and (max-width:656px) {
- 
+@media only screen and (max-width: 656px) {
   .x1 {
     -webkit-animation: floatUp 4s infinite linear;
     -moz-animation: floatUp 4s infinite linear;
@@ -217,11 +215,11 @@
     transform: scale(0.5);
     left: -15%;
   }
-  
+
   .x2 {
     display: none;
   }
-  
+
   .x3 {
     -webkit-animation: floatUp 2.5s infinite linear;
     -moz-animation: floatUp 2.5s infinite linear;
@@ -233,10 +231,11 @@
     transform: scale(0.5);
     left: 45%;
   }
-  
+
   .x4 {
-    display: none;  }
-  
+    display: none;
+  }
+
   .x5 {
     -webkit-animation: floatUp 8s infinite linear;
     -moz-animation: floatUp 8s infinite linear;
@@ -248,19 +247,19 @@
     transform: scale(1.2);
     left: -57%;
   }
-  
+
   .x6 {
     display: none;
   }
-  
+
   .x7 {
     display: none;
   }
-  
+
   .x8 {
     display: none;
   }
-  
+
   .x9 {
     -webkit-animation: floatUp 4.1s infinite linear;
     -moz-animation: floatUp 4.1s infinite linear;
@@ -271,5 +270,5 @@
     -o-transform: scale(0.9);
     transform: scale(0.9);
     left: 85%;
-  } 
+  }
 }
