@@ -6,20 +6,19 @@ import { Link } from "react-router-dom";
 import Globe from "../Components/Globe";
 
 const About = () => {
-  
   const skillGroup = [
-    {skill:"HTML"},
-    {skill:"CSS"},
-    {skill:"Bootstrap"},
-    {skill:"Tailwind CSS"},
-    {skill:"Javascript"},
-    {skill:"ReactJS"},
-    {skill:"NextJS"},
-    {skill:"JQuery"},
-    {skill:"NodeJS"},
-    {skill:"ExpressJS"},
-    {skill:"MySQL"},
-    {skill:"MongoDB"},
+    "HTML",
+    "CSS",
+    "Bootstrap",
+    "Tailwind CSS",
+    "Javascript",
+    "ReactJS",
+    "NextJS",
+    "JQuery",
+    "NodeJS",
+    "ExpressJS",
+    "MySQL",
+    "MongoDB",
   ];
 
   const [loading, setLoading] = useState(true);
@@ -80,7 +79,7 @@ const About = () => {
               to={"/blog"}
               className="text-[#14d9d8] hover:text-[15px] hover:text-[#06c2c2] absolute transition-all duration-300 flex items-center"
             >
-              Let’s make something special{" "}
+              Let’s make something special
               <BsArrowRight className="animate-[wiggle_1s_ease-in-out_infinite]" />{" "}
             </Link>
           </div>

@@ -21,17 +21,19 @@ const Skill = () => {
   };
 
   const skillFrontEnd = [
-    { name: "HTML & CSS", proficiency: "4/5" },
-    { name: "Javascript", proficiency: "3/4" },
-    { name: "ReactJS", proficiency: "3/4" },
-    { name: "NextJS", proficiency: "3/4" },
+    { name: "HTML & CSS", proficiency: "after:w-[75%] after:from-[#14d9d8] after:to-[#1d3653] after:bg-gradient-to-r" },
+    { name: "CSS Framework(Tailwind & Bootstrap)", proficiency: "after:w-[95%] after:from-[#14d9d8] after:to-[#1d3653] after:bg-gradient-to-r" },
+    { name: "Javascript", proficiency: "after:w-[80%] after:from-[#14d9d8] after:to-[#1d3653] after:bg-gradient-to-r" },
+    { name: "JQuery", proficiency: "after:w-[80%] after:from-[#14d9d8] after:to-[#1d3653] after:bg-gradient-to-r" },
+    { name: "ReactJS", proficiency: "after:w-[90%] after:from-[#14d9d8] after:to-[#1d3653] after:bg-gradient-to-r" },
+    { name: "NextJS", proficiency: "after:w-[70%] after:from-[#14d9d8] after:to-[#1d3653] after:bg-gradient-to-r" },
   ];
-
+  
   const skillBackEnd = [
-    { name: "Node JS", proficiency: "4/5" },
-    { name: "PHP", proficiency: "3/4" },
-    { name: "MySQL", proficiency: "3/4" },
-    { name: "MongoDB", proficiency: "3/4" },
+    { name: "Node JS", proficiency: "after:w-[70%] after:from-[#14d9d8] after:to-[#1d3653] after:bg-gradient-to-r" },
+    { name: "PHP", proficiency: "after:w-[30%] after:from-[#14d9d8] after:to-[#1d3653] after:bg-gradient-to-r" },
+    { name: "MongoDB", proficiency: "after:w-[65%] after:from-[#14d9d8] after:to-[#1d3653] after:bg-gradient-to-r" },
+    { name: "MySQL", proficiency: "after:w-[80%] after:from-[#14d9d8] after:to-[#1d3653] after:bg-gradient-to-r" },
   ];
 
   return (
@@ -102,7 +104,7 @@ const Skill = () => {
                 <div className="flex flex-col items-start my-2" key={index}>
                   <h3 className="text-slate-50 font-medium">{item.name}</h3>
                   <div
-                    className={`relative mt-1.5 w-4/5 h-0.5 bg-black rounded-lg after:content-[''] after:w-${item.proficiency} after:absolute after:top-0 after:left-0 after:from-[#14d9d8] after:to-[#531d48] after:bg-gradient-to-r after:h-0.5 after:z-50 after:transition-all after:hover:w-full after:duration-500 after:ease-in-out`}
+                    className={`relative mt-1.5 w-4/5 h-0.5 bg-black rounded-lg after:content-[''] ${item.proficiency} after:absolute after:top-0 after:left-0 after:h-0.5 after:z-50 after:transition-all after:hover:w-full after:duration-500 after:ease-in-out`}
                   ></div>
                 </div>
               ))}
@@ -116,7 +118,7 @@ const Skill = () => {
                 <div className="flex flex-col items-start my-2" key={index}>
                   <h3 className="text-slate-50 font-medium">{item.name}</h3>
                   <div
-                    className={`relative mt-1.5 w-4/5 h-0.5 bg-black rounded-lg after:content-[''] after:w-${item.proficiency} after:absolute after:top-0 after:left-0 after:from-[#14d9d8] after:to-[#531d48] after:bg-gradient-to-r after:h-0.5 after:z-50 after:transition-all after:hover:w-full after:duration-500 after:ease-in-out`}
+                    className={`relative mt-1.5 w-4/5 h-0.5 bg-black rounded-lg after:content-[''] ${item.proficiency} after:absolute after:top-0 after:left-0 after:h-0.5 after:z-50 after:transition-all after:hover:w-full after:duration-500 after:ease-in-out`}
                   ></div>
                 </div>
               ))}
