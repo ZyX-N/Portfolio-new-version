@@ -51,6 +51,10 @@
   opacity: 0%;
 }
 
+.tagcloud--item{
+  text-shadow: 10px 10px 50px rgba(20,217,216,0.5);
+}
+
 @keyframes trackShine {
   0% {
     opacity: 100%;

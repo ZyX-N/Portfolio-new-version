@@ -9,17 +9,18 @@ const Globe = (props) => {
     const texts = props.data;
 
     const options = {
-      radius: 300,
+      radius: props.radius ? props.radius : 300,
       maxSpeed: "fast",
       initSpeed: "normal",
       keep: true,
     };
 
     TagCloud(container, texts, options);
+    // eslint-disable-next-line
   }, []);
 
   return (
-    <div className="text-[#14d9d8] text-[18px] font-semibold">
+    <div className="text-[#14d9d8] text-[18px] font-semibold ">
       <span className="tagcloud"></span>
     </div>
   );

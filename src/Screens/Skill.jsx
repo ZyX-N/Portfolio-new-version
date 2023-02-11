@@ -22,7 +22,7 @@ const Skill = () => {
 
   const skillFrontEnd = [
     { name: "HTML & CSS", proficiency: "after:w-[75%] after:from-[#14d9d8] after:to-[#1d3653] after:bg-gradient-to-r" },
-    { name: "CSS Framework(Tailwind & Bootstrap)", proficiency: "after:w-[95%] after:from-[#14d9d8] after:to-[#1d3653] after:bg-gradient-to-r" },
+    { name: "CSS Framework (Tailwind & Bootstrap)", proficiency: "after:w-[95%] after:from-[#14d9d8] after:to-[#1d3653] after:bg-gradient-to-r" },
     { name: "Javascript", proficiency: "after:w-[80%] after:from-[#14d9d8] after:to-[#1d3653] after:bg-gradient-to-r" },
     { name: "JQuery", proficiency: "after:w-[80%] after:from-[#14d9d8] after:to-[#1d3653] after:bg-gradient-to-r" },
     { name: "ReactJS", proficiency: "after:w-[90%] after:from-[#14d9d8] after:to-[#1d3653] after:bg-gradient-to-r" },
@@ -37,19 +37,19 @@ const Skill = () => {
   ];
 
   return (
-    <section className="w-full h-[70vh] sm:h-screen relative">
+    <section className="w-full sm:h-screen relative">
       {loading ? (
         <Loading />
       ) : (
-        <div className="flex h-screen items-center">
+        <div className="flex h-full items-center">
           <div className="w-1/2 px-20 relative">
             <h1 className="text-[#14d9d8] text-[70px] leading-[75px] flex font-semibold">
-              {["S", "k", "i", "l", "l", "s", "&"].map((letter,index) => (
+              {["M","y","S", "k", "i", "l", "l", "s"].map((letter,index) => (
                 <Bouncingword
                   text={letter}
                   key={index}
                   textClass={`drop-shadow-[1px_1px_50px_rgba(20,217,216,0.5)] flex ${
-                    letter === "&" && "ml-2"
+                    letter === "S" && "ml-2"
                   }`}
                   onMouseEnter={(e) => {
                     textBounce(e);
@@ -57,7 +57,7 @@ const Skill = () => {
                 />
               ))}
             </h1>
-            <h1 className="text-[#14d9d8] text-[70px] leading-[75px] flex font-semibold">
+            {/* <h1 className="text-[#14d9d8] text-[70px] leading-[75px] flex font-semibold">
               {["E", "x", "p", "e", "r", "i", "e", "n", "c", "e"].map(
                 (letter,index) => (
                   <Bouncingword
@@ -72,7 +72,7 @@ const Skill = () => {
                   />
                 )
               )}
-            </h1>
+            </h1> */}
             <p className="text-slate-50 mt-4">
               Since beginning my journey as a freelance developer nearly 10
               years ago, I’ve done remote work for agencies, consulted for

@@ -19,6 +19,8 @@ const About = () => {
     "ExpressJS",
     "MySQL",
     "MongoDB",
+    "PHP",
+    "AJAX"
   ];
 
   const [loading, setLoading] = useState(true);
@@ -39,13 +41,13 @@ const About = () => {
   };
 
   return (
-    <section className="w-full h-[70vh] sm:h-screen relative">
+    <section className="w-full md:h-screen relative">
       {loading ? (
         <Loading />
       ) : (
-        <div className="flex h-screen items-center">
-          <div className="w-1/2 px-20 relative">
-            <h1 className="text-[#14d9d8] text-[60px] flex font-semibold">
+        <div className="flex flex-col justify-center pt-20 md:pt-0 md:flex-row h-full items-center">
+          <div className="w-full md:w-[45%] px-14 md:pl-20 md:pr-0 lg:pr-10 relative">
+            <h1 className="text-[#14d9d8] text-[45px] lg:text-[60px] flex font-semibold">
               {["M", "e", ",", "M", "y", "s", "e", "l", "f", "&", "I"].map(
                 (letter, index) => (
                   <Bouncingword
@@ -61,16 +63,16 @@ const About = () => {
                 )
               )}
             </h1>
-            <p className="text-slate-50 mt-4 pr-10">
+            <p className="text-slate-50 mt-4 pr-0 md:pr-10 text-justify md:text-left">
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum,
               ea adipisci voluptate modi illo ipsam beatae praesentium!
               Consequatur, obcaecati sapiente!
             </p>
-            <p className="text-slate-50 mt-4 pr-10">
+            <p className="text-slate-50 mt-4 pr-0 md:pr-10 text-justify md:text-left">
               Sapiente vero esse libero? Cum doloremque iusto sapiente debitis
               in nemo ut assumenda, earum itaque facere a nobis sequi labore ea
             </p>
-            <p className="text-slate-50 my-4 pr-10">
+            <p className="text-slate-50 my-4 pr-0 md:pr-10 text-justify md:text-left">
               accusamus necessitatibus veniam distinctio id eum eveniet,
               possimus alias expedita! Placeat eligendi quam ex modi illo
               molestiae. Vel, explicabo?
@@ -83,8 +85,8 @@ const About = () => {
               <BsArrowRight className="animate-[wiggle_1s_ease-in-out_infinite]" />{" "}
             </Link>
           </div>
-          <div className="w-1/2">
-            <Globe data={skillGroup} />
+          <div className="w-full md:w-[55%] mt-5 md:mt-0 lg:pl-0 xl:pl-10 overflow-x-hidden">
+            <Globe data={skillGroup} radius={250} />
           </div>
         </div>
       )}
