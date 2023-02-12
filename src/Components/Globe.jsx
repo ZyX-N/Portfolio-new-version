@@ -10,7 +10,7 @@ const Globe = (props) => {
 
     const options = {
       radius: props.radius ? props.radius : 300,
-      maxSpeed: "fast",
+      maxSpeed: "normal",
       initSpeed: "normal",
       keep: true,
     };
