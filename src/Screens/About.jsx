@@ -84,8 +84,9 @@ const About = () => {
               <BsArrowRight className="animate-[wiggle_1s_ease-in-out_infinite]" />{" "}
             </Link>
           </div>
-          <div className="w-1/2">
-            <Globe data={skillGroup} />
+          {/* <div className="w-1/2 h-full flex items-center justify-center" onContextMenu={(e)=>{e.preventDefault()}}> */}
+          <div className="w-1/2 h-full">
+            {/* <Globe data={skillGroup} /> */}
           </div>
         </div>
       )}

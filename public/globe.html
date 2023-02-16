@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./TagCloud.min.js"></script>
+    <title>Globe</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Hind:wght@600&display=swap");
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: transparent;
+        color: #06c2c2;
+        font-size: 22px;
+        font-weight: 600;
+        font-family: "Hind", serif;
+        text-shadow: 1px 1px 50px rgba(20, 217, 216, 0.5);
+      }
+      .context {
+        height: 100%;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body id="body">
+    <div class="content"></div>
+
+    <script>
+      document.getElementById("body").addEventListener("contextmenu", (e) => {
+        e.preventDefault();
+      });
+
+      const myTags = [
+        "HTML",
+        "CSS",
+        "Tailwind",
+        "Bootstrap",
+        "JavaScript",
+        "AJAX",
+        "JQuery",
+        "ReactJS",
+        "NextJS",
+        "NodeJS",
+        "ExpressJS",
+        "MongoDB",
+        "MySQL",
+        "JAVA",
+        "PYTHON",
+        "PHP",
+      ];
+
+      var tagCloud = TagCloud(".content", myTags, {
+        // radius in px
+        radius: 300,
+        // animation speed
+        // slow, normal, fast
+        maxSpeed: "normal",
+        initSpeed: "normal",
+        // 0 = top
+        // 90 = left
+        // 135 = right-bottom
+        direction: 135,
+
+        // interact with cursor move on mouse out
+        keep: true,
+        useContainerInlineStyles: true,
+        useItemInlineStyles: true,
+        containerClass: "tagcloud",
+        itemClass: "tagcloud--item",
+      });
+
+    Tagcloud();
+    </script>
+  </body>
+</html>
