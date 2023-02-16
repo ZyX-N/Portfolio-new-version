@@ -9,9 +9,9 @@ const Navbar = (props) => {
   const navigators = [
     {text:"About",href:"/about"},
     {text:"My Skill",href:"/skill"},
+    {text:"Project",href:"/project"},
     {text:"Work",href:"/work"},
     {text:"Contact",href:"/contact"},
-    {text:"Blog",href:"/blog"},
   ];
 
   return (

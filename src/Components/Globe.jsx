@@ -1,10 +1,29 @@
-import React from "react";
+import React, { useEffect } from "react";
 
-const Globe = () => {
+// npm i TagCloud
+import TagCloud from "TagCloud";
+
+const Globe = (props) => {
+  useEffect(() => {
+    const container = ".tagcloud";
+    const texts = props.data;
+
+    const options = {
+      radius: props.radius ? props.radius : 300,
+      maxSpeed: "normal",
+      initSpeed: "normal",
+      keep: true,
+    };
+
+    TagCloud(container, texts, options);
+    // eslint-disable-next-line
+  }, []);
+
   return (
-    <embed type="text/html" src="http://127.0.0.1:5501/public/globe.html" className="w-full h-full overflow-hidden" />
-    // <iframe src="http://127.0.0.1:5501/public/globe.html" frameborder="0" className="w-full h-full overflow-hidden" ></iframe>
-  )
+    <div className="text-[#14d9d8] text-[18px] font-semibold ">
+      <span className="tagcloud"></span>
+    </div>
+  );
 };
 
 export default Globe;
