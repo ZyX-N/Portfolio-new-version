@@ -13,7 +13,7 @@ const Navbar = (props) => {
     {text:"Work",href:"/work"},
     {text:"Contact",href:"/contact"},
   ];
-
+  
   return (
     <nav className="w-[140px] h-screen z-50 relative">
       <div
@@ -35,13 +35,15 @@ const Navbar = (props) => {
         <h1 className="text-gray-400 font-light"> Web Developer </h1>
       </Link>
       <div className="w-full h-4/5 bg-[#181818] pt-14">
+
         <ul className="w-full flex flex-col">
           {navigators.map((item,index)=>(
-          <Link to={{ pathname: `${item.href}` }} key={index} className={`w-full py-3.5 ${index !== 3 && "border-t"} ${index === 3 && "border-y"} ${index.href === window.location.pathname ? "text-[#14d9d8]" : "text-gray-400"} border-gray-700 flex justify-center font-hind text-lg hover:text-[#14d9d8]`}>
+          <Link to={item.href} key={index} className={`w-full py-3.5 ${index !== 3 ? "border-t" : ""} ${index === 3 ? "border-y" : ""} ${index.href === window.location.pathname ? "text-[#14d9d8]" : "text-gray-400"} border-gray-700 flex justify-center font-hind text-lg`}>
               {item.text}
           </Link>
 ))}
         </ul>
+
         <div className="flex flex-wrap mt-16 w-full justify-center text-gray-400">
           <a href="/" className="mx-2.5">
             <FaLinkedinIn className="text-lg hover:text-[#14d9d8]" />
