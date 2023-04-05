@@ -67,10 +67,10 @@ const Work = () => {
 
           <div className="flex flex-col mt-8">
             <ul className="flex">
-              <li className={`list-none text-xl font-hind text-slate-50 font-semibold mr-7 tracking-wide cursor-pointer relative after:content-[''] after:absolute after:bottom-0 after:left-0 ${projectTab === "official" ? "after:bg-[#14d9d8]" : ""} after:h-0.5 after:w-full after:rounded-lg`} onClick={()=>{setProjectTab("official")}}>
+              <li className={`list-none text-xl font-hind text-slate-50 font-semibold mr-5 tracking-wide cursor-pointer relative after:content-[''] after:absolute after:bottom-0 after:left-0 ${projectTab === "official" ? "after:w-full" : "after:w-0"} after:h-0.5 after:bg-[#14d9d8] after:rounded-lg transition-all duration-300 ease-in-out`} onClick={()=>{setProjectTab("official")}}>
                 Official
               </li>
-              <li className={`list-none text-xl font-hind text-slate-50 font-semibold mr-7 tracking-wide cursor-pointer relative after:content-[''] after:absolute after:bottom-0 after:left-0 ${projectTab === "personal" ? "after:bg-[#14d9d8]" : ""} after:h-0.5 after:w-full after:rounded-lg`} onClick={()=>{setProjectTab("personal")}}>
+              <li className={`list-none text-xl font-hind text-slate-50 font-semibold mr-5 tracking-wide cursor-pointer relative after:content-[''] after:absolute after:bottom-0 after:left-0 ${projectTab === "personal" ? "after:w-full" : "after:w-0"} after:h-0.5 after:bg-[#14d9d8] after:rounded-lg transition-all duration-300 ease-in-out`} onClick={()=>{setProjectTab("personal")}}>
               Personal
               </li>
             </ul>
