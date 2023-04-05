@@ -6,10 +6,12 @@ import About from "./Screens/About";
 import Contact from "./Screens/Contact";
 import Home from "./Screens/Home";
 import Skill from "./Screens/Skill";
+import Work from "./Screens/Work";
 
 function App() {
 
   const [navOpen , setNavOpen] = useState(false);
+  
 
   return (
     <BrowserRouter>
@@ -29,6 +31,7 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/skill" element={<Skill />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/work" element={<Work />} />
           </Routes>
         </div>
       </div>

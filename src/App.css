@@ -1,9 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Hind:wght@600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Paytone+One&display=swap");
 
-::-webkit-scrollbar{
+/* ::-webkit-scrollbar{
   background: #06c2c2;
-}
+  height: 2px;
+} */
 
 @keyframes rubberBand {
   0% {

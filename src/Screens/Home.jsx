@@ -120,7 +120,7 @@ const Home = (props) => {
                 </a>
               </div>
             </div>
-          </div>{" "}
+          </div>
         </>
       )}
     </section>
