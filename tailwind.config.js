@@ -32,6 +32,9 @@ module.exports = {
       letterSpacing: {
         tightest: '2px',
       },
+      zIndex: {
+        '100': '100',
+      },
       animation: {
         wiggle: 'wiggle 1s ease-in-out infinite',
       },

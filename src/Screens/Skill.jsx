@@ -37,13 +37,13 @@ const Skill = () => {
   ];
 
   return (
-    <section className="w-full sm:h-screen relative">
+    <section className="w-full md:h-screen relative">
       {loading ? (
         <Loading />
       ) : (
-        <div className="flex h-full items-center">
-          <div className="w-1/2 px-20 relative">
-            <h1 className="text-[#14d9d8] text-[70px] leading-[75px] flex font-semibold">
+        <div className="flex flex-col md:flex-row h-full items-center md:px-0 px-14 md:pb-0 pb-20">
+          <div className="w-full md:w-1/2 px-6 relative pt-5">
+            <h1 className="text-[#14d9d8] text-[45px] md:text-[70px] leading-[75px] flex font-semibold">
               {["M","y","S", "k", "i", "l", "l", "s"].map((letter,index) => (
                 <Bouncingword
                   text={letter}
@@ -57,46 +57,30 @@ const Skill = () => {
                 />
               ))}
             </h1>
-            {/* <h1 className="text-[#14d9d8] text-[70px] leading-[75px] flex font-semibold">
-              {["E", "x", "p", "e", "r", "i", "e", "n", "c", "e"].map(
-                (letter,index) => (
-                  <Bouncingword
-                    text={letter}
-                    key={index}
-                    textClass={`drop-shadow-[1px_1px_50px_rgba(20,217,216,0.5)] flex ${
-                      letter === "&" && "mx-2"
-                    }`}
-                    onMouseEnter={(e) => {
-                      textBounce(e);
-                    }}
-                  />
-                )
-              )}
-            </h1> */}
-            <p className="text-slate-50 mt-4">
+            <p className="text-slate-50 mt-4 text-justify">
               Since beginning my journey as a freelance developer nearly 10
               years ago, I’ve done remote work for agencies, consulted for
               startups, and collaborated with talented people to create web
               products for both business and consumer use.
             </p>
-            <p className="text-slate-50 mt-4">
+            <p className="text-slate-50 mt-4 text-justify">
               I create successful responsive websites that are fast, easy to
               use, and built with best practices. The main area of my expertise
               is front-end development, HTML, CSS, JS, building small and medium
               web apps, custom plugins, features, animations, and coding
               interactive layouts.
             </p>
-            <p className="text-slate-50 my-4">
+            <p className="text-slate-50 my-4 text-justify">
               I also have full-stack developer experience with popular
               open-source CMS like (WordPress, Drupal, Magento, Keystone.js and
               others) .
             </p>
-            <p className="text-slate-50 my-4">
+            <p className="text-slate-50 my-4 text-justify">
               Visit my LinkedIn profile for more details or just contact me.
             </p>
           </div>
-          <div className="w-1/2 flex flex-col">
-            <h2 className="text-slate-50 text-[22px] text-center pr-36 font-semibold tracking-[2px]">
+          <div className="w-full md:w-1/2 px-6 md:mt-0 mt-6 flex flex-col">
+            <h2 className="text-slate-50 text-[22px] text-center md:pr-36 font-semibold tracking-[2px]">
               Front End
             </h2>
             <div className="mt-2">
@@ -104,13 +88,13 @@ const Skill = () => {
                 <div className="flex flex-col items-start my-2" key={index}>
                   <h3 className="text-slate-50 font-medium">{item.name}</h3>
                   <div
-                    className={`relative mt-1.5 w-4/5 h-0.5 bg-black rounded-lg after:content-[''] ${item.proficiency} after:absolute after:top-0 after:left-0 after:h-0.5 after:z-50 after:transition-all after:hover:w-full after:duration-500 after:ease-in-out`}
+                    className={`relative mt-1.5 w-full md:w-4/5 h-0.5 bg-black rounded-lg after:content-[''] ${item.proficiency} after:absolute after:top-0 after:left-0 after:h-0.5 after:z-50 after:transition-all after:hover:w-full after:duration-500 after:ease-in-out`}
                   ></div>
                 </div>
               ))}
             </div>
 
-            <h2 className="text-slate-50 text-[22px] text-center pr-36 font-semibold mt-4 tracking-[2px]">
+            <h2 className="text-slate-50 text-[22px] text-center md:pr-36 font-semibold mt-4 tracking-[2px]">
               Back End
             </h2>
             <div className="mt-2">
@@ -118,7 +102,7 @@ const Skill = () => {
                 <div className="flex flex-col items-start my-2" key={index}>
                   <h3 className="text-slate-50 font-medium">{item.name}</h3>
                   <div
-                    className={`relative mt-1.5 w-4/5 h-0.5 bg-black rounded-lg after:content-[''] ${item.proficiency} after:absolute after:top-0 after:left-0 after:h-0.5 after:z-50 after:transition-all after:hover:w-full after:duration-500 after:ease-in-out`}
+                    className={`relative mt-1.5 w-full md:w-4/5 h-0.5 bg-black rounded-lg after:content-[''] ${item.proficiency} after:absolute after:top-0 after:left-0 after:h-0.5 after:z-50 after:transition-all after:hover:w-full after:duration-500 after:ease-in-out`}
                   ></div>
                 </div>
               ))}

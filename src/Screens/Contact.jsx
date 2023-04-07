@@ -94,8 +94,8 @@ const Contact = () => {
       ) : (
         <div className="flex flex-col lg:flex-row h-screen items-center pt-20 pb-0 lg:pt-0">
           <div
-            className={`absolute left-[5%] shadow-2xl z-50 transition-all duration-700 ease-in-out ${
-              alertShow === true ? "bottom-[20px]" : "-bottom-[200px]"
+            className={`absolute left-[15%] md:left-[5%] shadow-2xl z-50 transition-all duration-700 ease-in-out ${
+              alertShow === true ? "bottom-[250px] md:bottom-[20px]" : "-bottom-[600px]"
             }`}
           >
             <Alert

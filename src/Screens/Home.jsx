@@ -106,7 +106,7 @@ const Home = (props) => {
               </p>
               <div className="flex mt-10">
                 <a
-                  href="./static/media/Aman's_Resume.pdf"
+                  href="./static/media/Aman's_Resume.pdf.pdf"
                   className="py-2 px-4 sm:py-3 sm:px-8 bg-transparent text-[#14d9d8] border-2 border-[#14d9d8] hover:bg-[#14d9d8] hover:text-[#1d1d1d] flex items-center justify-center transition-all duration-100 ease-in-out text-lg rounded-md cursor-pointer font-hind tracking-wider hover:scale-125"
                   download={true}
                 >
