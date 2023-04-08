@@ -11,27 +11,27 @@ const Work = () => {
       summary: "Times Ascent, a part of The Times of India, is focused on career enhancement, jobs, upskill courses, latest events, trending news, remote work, human resource, free resume maker, psychometric tests, interview tips- timesascent.com",
       url:"https://timesascent.com/",
       // image: "https://timesascent.com/times_ascent_logo.svg"
-      image: "/static/images/times_ascent.png"
+      image: "./static/images/times_ascent.png"
     },
     {
       title: "Education Times",
       summary: "Part of Times of India focused on education, counsellors, Q&A, education fair and placement reports. Top career site - Educationtimes.com",
       url:"https://et.onecorp.co.in/",
-      image: "/static/images/education_times.jpg"
+      image: "./static/images/education_times.jpg"
       // image: "https://et.onecorp.co.in/Education%20Times.com%20beta%20Logo.svg"
     },
     {
       title: "Aviral Times",
       summary: "Aviraltimes.com is a digital wing of the Hindi weekly newspaper - Aviral Times. It is the most reliable and authentic news website.",
       url:"https://www.aviraltimes.com/",
-      image: "/static/images/aviral_times.png"
+      image: "./static/images/aviral_times.png"
       // image: "https://www.aviraltimes.com/AviralLogo.svg"
     },
     {
       title: "Rozgaar India",
       summary: "Rozgaar India is a website made for people to get on-site, hybrid or remote jobs with the best compatibility they want or need.",
       url:"https://www.rozgaarindia.com/",
-      image: "/static/images/rozgaar_india.jpg"
+      image: "./static/images/rozgaar_india.jpg"
       // image: "https://www.rozgaarindia.com/assets/IPassets/Rozgaar_Black_Logo.svg"
     }
   ];
@@ -41,7 +41,7 @@ const Work = () => {
       title: "Anonymous Chatter",
       summary: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus optio ipsum, fugiat voluptatibus odit velit rerum provident commodi numquam ducimus praesentium nemo voluptatem",
       // url:"https://et.onecorp.co.in/",
-      image: "/static/images/iChat-logo_new.png"
+      image: "./static/images/iChat-logo_new.png"
     },
   ];
 

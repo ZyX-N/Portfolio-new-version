@@ -27,7 +27,7 @@ function App() {
             className="absolute top-5 right-3 sm:right-10 w-40 z-50"
           />
           <Routes>
-            <Route path="/" element={<Home open={navOpen} />} />
+            <Route path="/index.html" element={<Home open={navOpen} />} />
             <Route path="/about" element={<About />} />
             <Route path="/skill" element={<Skill />} />
             <Route path="/contact" element={<Contact />} />

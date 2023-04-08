@@ -41,7 +41,7 @@ const Skill = () => {
       {loading ? (
         <Loading />
       ) : (
-        <div className="flex flex-col md:flex-row h-full items-center md:px-0 px-14 md:pb-0 pb-20">
+        <div className="flex flex-col md:flex-row h-full items-center px-14 md:pb-0 pb-20">
           <div className="w-full md:w-1/2 md:px-6 relative pt-5">
             <h1 className="text-[#14d9d8] text-[45px] md:text-[70px] leading-[75px] flex font-semibold">
               {["M","y","S", "k", "i", "l", "l", "s"].map((letter,index) => (
