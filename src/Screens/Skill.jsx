@@ -42,7 +42,7 @@ const Skill = () => {
         <Loading />
       ) : (
         <div className="flex flex-col md:flex-row h-full items-center md:px-0 px-14 md:pb-0 pb-20">
-          <div className="w-full md:w-1/2 px-6 relative pt-5">
+          <div className="w-full md:w-1/2 md:px-6 relative pt-5">
             <h1 className="text-[#14d9d8] text-[45px] md:text-[70px] leading-[75px] flex font-semibold">
               {["M","y","S", "k", "i", "l", "l", "s"].map((letter,index) => (
                 <Bouncingword
@@ -79,7 +79,7 @@ const Skill = () => {
               Visit my LinkedIn profile for more details or just contact me.
             </p>
           </div>
-          <div className="w-full md:w-1/2 px-6 md:mt-0 mt-6 flex flex-col">
+          <div className="w-full md:w-1/2 md:px-6 md:mt-0 mt-6 flex flex-col">
             <h2 className="text-slate-50 text-[22px] text-center md:pr-36 font-semibold tracking-[2px]">
               Front End
             </h2>

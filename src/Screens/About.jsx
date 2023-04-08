@@ -85,8 +85,8 @@ const About = () => {
               <BsArrowRight className="animate-[wiggle_1s_ease-in-out_infinite]" />{" "}
             </Link>
           </div>
-          <div className="w-full md:w-[55%] mt-5 md:mt-0 lg:pl-0 xl:pl-10 overflow-x-hidden">
-            <Globe data={skillGroup} radius={250} />
+          <div className="w-full flex justify-center md:w-[55%] mt-5 md:mt-0 lg:pl-0 xl:pl-10 overflow-x-hidden">
+            <Globe data={skillGroup} radius={200} />
           </div>
         </div>
       )}
