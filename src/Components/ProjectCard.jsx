@@ -23,6 +23,7 @@ const ProjectCard = (props) => {
         {props.data.url && (
             <a
               href={props.data.url}
+              rel="noreferrer"
               className="text-[#14d9d8] hover:text-[#06c2c2] transition-all duration-300 flex items-center mt-4 md:mt-1 md:text-[14px]"
               target="_blank"
             >

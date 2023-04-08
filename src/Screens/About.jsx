@@ -82,12 +82,15 @@ const About = () => {
               className="text-[#14d9d8] hover:text-[15px] hover:text-[#06c2c2] absolute transition-all duration-300 flex items-center"
             >
               Let’s make something special
-              <BsArrowRight className="animate-[wiggle_1s_ease-in-out_infinite]" />{" "}
+              <BsArrowRight className="animate-[wiggle_1s_ease-in-out_infinite]" />
             </Link>
           </div>
           <div className="w-full flex justify-center md:w-[55%] mt-5 md:mt-0 lg:pl-0 xl:pl-10 overflow-x-hidden">
-            <Globe data={skillGroup} radius={200} />
+            <Globe data={skillGroup} radius={250} />
           </div>
+          {/* <div className="w-full flex md:hidden justify-center md:w-[55%] mt-5 md:mt-0 lg:pl-0 xl:pl-10 overflow-x-hidden">
+            <Globe data={skillGroup} radius={200} />
+          </div> */}
         </div>
       )}
     </section>
