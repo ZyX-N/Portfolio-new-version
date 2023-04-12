@@ -30,7 +30,7 @@ const Navbar = (props) => {
           }}
         />
       </div>
-      <Link to={"/index.html"} className="w-full h-1/5 bg-[#000000] flex flex-col items-center justify-around pb-4">
+      <Link to={"/"} className="w-full h-1/5 bg-[#000000] flex flex-col items-center justify-around pb-4">
         <img src="./static/images/logo-light.png" alt="AMAN" className="mt-5" />
         <h1 className="text-gray-400 font-light"> Web Developer </h1>
       </Link>
