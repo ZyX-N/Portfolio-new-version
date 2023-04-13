@@ -7,6 +7,7 @@ import Contact from "./Screens/Contact";
 import Home from "./Screens/Home";
 import Skill from "./Screens/Skill";
 import Work from "./Screens/Work";
+import Footer from "./Components/Footer";
 
 function App() {
 
@@ -20,7 +21,7 @@ function App() {
           <Navbar open={navOpen} setOpen={setNavOpen} />
         </div>
           {/* #000428 -> #004e92 */}
-        <div className="w-full lg:w-[calc(100vw-140px)] bg-[#1d1d1d] ml-auto min-h-screen relative overflow-hidden">
+        <div className="w-full flex flex-col lg:w-[calc(100vw-140px)] bg-[#1d1d1d] ml-auto min-h-screen relative overflow-hidden">
         <img
             src="./static/images/logo-light.png"
             alt="AMAN"
@@ -33,6 +34,9 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/work" element={<Work />} />
           </Routes>
+
+          {/* <Footer /> */}
+
         </div>
       </div>
     </BrowserRouter>
