@@ -2,9 +2,12 @@ import React, { useState, useEffect } from "react";
 import Bouncingword from "../Components/Bouncingword";
 import Loading from "../Components/Loading";
 import Scrollbounce from "../Components/ScrollBouce";
+import About from "./About";
+import Skill from "./Skill";
+import Contact from "./Contact";
+import Work from "./Work";
 
 const Home = (props) => {
-
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -21,7 +24,7 @@ const Home = (props) => {
   };
 
   return (
-    <section className="w-full h-[70vh] sm:h-screen relative">
+    <section className="w-full relative">
       {loading ? (
         <Loading />
       ) : (
@@ -34,9 +37,9 @@ const Home = (props) => {
             <Scrollbounce text="Scroll Down" textClass="text-white" />
           </span>
           <span className="fixed bottom-4 right-0">
-           <Scrollbounce text="Scroll Down" textClass="text-white" />
+            <Scrollbounce text="Scroll Down" textClass="text-white" />
           </span>
-          <div className="w-full h-full flex items-center anim-bg">
+          <div className="w-full h-screen flex items-center anim-bg">
             <div className="light x1"></div>
             <div className="light x2"></div>
             <div className="light x3"></div>
@@ -49,7 +52,7 @@ const Home = (props) => {
 
             <div className="sm:w-2/3 w-full flex flex-col justify-around sm:mb-0 ml-0 sm:ml-10 md:ml-20 items-center sm:items-start">
               <h1 className="text-slate-50 text-[40px] min-[450px]:text-[55px] sm:text-[60px] md:text-[80px] sm:leading-[60px] leading-[45px] md:leading-[80px] font-paytone my-1.5 font-thin flex">
-                {["H", "e", "y", ","].map((letter,index) => (
+                {["H", "e", "y", ","].map((letter, index) => (
                   <Bouncingword
                     text={letter}
                     key={index}
@@ -61,7 +64,7 @@ const Home = (props) => {
                 ))}
               </h1>
               <h1 className="text-slate-50 text-[40px] min-[450px]:text-[55px] sm:text-[60px] md:text-[80px] sm:leading-[60px] leading-[45px] md:leading-[80px] font-paytone my-1.5 font-thin flex">
-                {["I", "'", "m", "A", "m", "a", "n"].map((letter,index) => (
+                {["I", "'", "m", "A", "m", "a", "n"].map((letter, index) => (
                   <Bouncingword
                     text={letter}
                     key={index}
@@ -88,7 +91,7 @@ const Home = (props) => {
                   "p",
                   "e",
                   "r",
-                ].map((letter,index) => (
+                ].map((letter, index) => (
                   <Bouncingword
                     text={letter}
                     key={index}
@@ -120,6 +123,16 @@ const Home = (props) => {
                 </a>
               </div>
             </div>
+          </div>
+
+          <div className="w-full">
+            <About />
+          </div>
+          <div className="w-full pb-5">
+            <Skill />
+          </div>
+          <div className="w-full py-10">
+            <Contact />
           </div>
         </>
       )}

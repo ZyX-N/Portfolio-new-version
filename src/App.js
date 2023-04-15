@@ -16,7 +16,7 @@ function App() {
 
   return (
     <BrowserRouter>
-      <div className="w-screen">
+      <div className="w-full">
         <div className={`fixed transition-all duration-500 ease-in-out top-0 lg:left-0 ${navOpen === true ? "left-0" : "-left-40"} z-[60]`}>
           <Navbar open={navOpen} setOpen={setNavOpen} />
         </div>
