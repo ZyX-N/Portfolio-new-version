@@ -39,7 +39,7 @@ const Work = () => {
   const personalProject = [
     {
       title: "Anonymous Chatter",
-      summary: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus optio ipsum, fugiat voluptatibus odit velit rerum provident commodi numquam ducimus praesentium nemo voluptatem",
+      summary: "A chatting web application with some enhance feature.... Coming soon...!",
       // url:"https://et.onecorp.co.in/",
       image: "./static/images/iChat-logo_new.png"
     },
