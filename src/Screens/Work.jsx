@@ -147,10 +147,7 @@ const Work = () => {
             </h1>
 
             <p className="text-slate-50 mt-6 md:mt-4 w-full md:w-2/3 md:text-left text-justify">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi
-              totam animi sit enim molestiae accusamus architecto est quo, nihil
-              et beatae atque a non ratione recusandae odit provident
-              blanditiis. Cumque?
+              I have been working since 2021 and starts my professional career in 2022 with an organization where I was a part of many of the big and small projects which are listed below. There are some projects also which I created by my own personally to give a showcase of my skills.
             </p>
           </div>
 
@@ -163,7 +160,7 @@ const Work = () => {
               Personal
               </li>
             </ul>
-            <div className="w-full h-full mt-0 md:mt-8 flex flex-col justify-center lg:justify-start md:flex-row items-center flex-wrap">
+            <div className="w-full h-full mt-0 md:mt-4 flex flex-col justify-center lg:justify-start md:flex-row items-center flex-wrap">
               {projectTab === "official" ? 
               officialProject.map((item,index) => (
                 <div className="md:mr-8 mt-8" key={index}>

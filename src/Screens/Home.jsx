@@ -29,6 +29,7 @@ const Home = (props) => {
         <Loading />
       ) : (
         <>
+        
           <span
             className={`fixed bottom-4 ${
               props.open === true ? "left-36" : "left-0"
@@ -39,7 +40,8 @@ const Home = (props) => {
           <span className="fixed bottom-4 right-0">
             <Scrollbounce text="Scroll Down" textClass="text-white" />
           </span>
-          <div className="w-full h-screen flex items-center anim-bg">
+
+          <div className="w-full h-[600px] sm:h-screen flex items-center anim-bg">
             <div className="light x1"></div>
             <div className="light x2"></div>
             <div className="light x3"></div>
@@ -125,13 +127,13 @@ const Home = (props) => {
             </div>
           </div>
 
-          <div className="w-full">
+          <div className="w-full mt-0 pt-0 pb-10">
             <About />
           </div>
-          <div className="w-full pb-5">
+          <div className="w-full pb-5 pt-10">
             <Skill />
           </div>
-          <div className="w-full py-10">
+          <div className="w-full pb-10">
             <Contact />
           </div>
         </>

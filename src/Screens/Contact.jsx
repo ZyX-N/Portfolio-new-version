@@ -85,7 +85,7 @@ const Contact = () => {
       setAlertShow(false);
     }, 5000);
     // eslint-disable-next-line
-  },[alertShow]);
+  }, [alertShow]);
 
   return (
     <section className="w-full md:h-screen relative">
@@ -95,7 +95,9 @@ const Contact = () => {
         <div className="flex flex-col lg:flex-row items-center pt-20 pb-10 md:pb-0 lg:pt-0">
           <div
             className={`absolute left-[15%] md:left-[5%] shadow-2xl z-50 transition-all duration-700 ease-in-out ${
-              alertShow === true ? "bottom-[250px] md:bottom-[20px]" : "-bottom-[600px]"
+              alertShow === true
+                ? "bottom-[250px] md:bottom-[20px]"
+                : "-bottom-[600px]"
             }`}
           >
             <Alert
@@ -200,7 +202,6 @@ const Contact = () => {
           </div>
           <div className="w-full lg:w-1/2 mt-10 lg:px-0 px-14 lg:mt-0">
             <div className="h-[400px] lg:h-screen w-full lg:w-[800px] relative before:content-[''] before:absolute before:w-full before:h-full before:bg-black-rgba before:top-0 before:left-0 z-40">
-
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7425920.51410852!2d78.27352158091566!3d24.660270911522385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399bfd991f32b16b%3A0x93ccba8909978be7!2sLucknow%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1675298635921!5m2!1sen!2sin"
                 title="locationMap"
@@ -220,7 +221,6 @@ const Contact = () => {
                 referrerPolicy="no-referrer-when-downgrade"
                 className="z-0 lg:hidden block"
               ></iframe> */}
-
             </div>
           </div>
         </div>

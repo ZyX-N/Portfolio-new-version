@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import { BsArrowRight } from "react-icons/bs";
+import { Link } from "react-router-dom";
 import Bouncingword from "../Components/Bouncingword";
 import Loading from "../Components/Loading";
 
@@ -31,6 +33,7 @@ const Skill = () => {
   
   const skillBackEnd = [
     { name: "Node JS", proficiency: "after:w-[70%] after:from-[#14d9d8] after:to-[#1d3653] after:bg-gradient-to-r" },
+    { name: "DJango", proficiency: "after:w-[65%] after:from-[#14d9d8] after:to-[#1d3653] after:bg-gradient-to-r" },
     { name: "PHP", proficiency: "after:w-[30%] after:from-[#14d9d8] after:to-[#1d3653] after:bg-gradient-to-r" },
     { name: "MongoDB", proficiency: "after:w-[65%] after:from-[#14d9d8] after:to-[#1d3653] after:bg-gradient-to-r" },
     { name: "MySQL", proficiency: "after:w-[80%] after:from-[#14d9d8] after:to-[#1d3653] after:bg-gradient-to-r" },
@@ -58,28 +61,27 @@ const Skill = () => {
               ))}
             </h1>
             <p className="text-slate-50 mt-4 text-justify">
-              Since beginning my journey as a freelance developer nearly 10
-              years ago, I’ve done remote work for agencies, consulted for
-              startups, and collaborated with talented people to create web
-              products for both business and consumer use.
+            Since beginning my journey as a freelance developer nearly 2 years ago, I've done remote work for startups, and collaborated with talented people to create web products.
             </p>
             <p className="text-slate-50 mt-4 text-justify">
-              I create successful responsive websites that are fast, easy to
+            I create successful responsive websites that are fast, easy to
               use, and built with best practices. The main area of my expertise
-              is front-end development, HTML, CSS, JS, building small and medium
-              web apps, custom plugins, features, animations, and coding
-              interactive layouts.
+              is HTML, CSS, Javascript, ReactJs and NodeJs but I'm quite good in NextJs, JQuery, and DJango too. Besides this, I have also worked a little bit with some more different web technologies like PHP and GoLang.
             </p>
             <p className="text-slate-50 my-4 text-justify">
-              I also have full-stack developer experience with popular
-              open-source CMS like (WordPress, Drupal, Magento, Keystone.js and
-              others) .
+              I also have Competitive programming experience with popular programming languages like ( JAVA, C and Python ).
             </p>
-            <p className="text-slate-50 my-4 text-justify">
-              Visit my LinkedIn profile for more details or just contact me.
+            <p className="text-slate-50 my-4 text-justify flex">
+              Visit my social media profile for more details or just 
+              <Link
+              to={"/contact"}
+              className="text-[#14d9d8] hover:text-[15px] hover:text-[#06c2c2] transition-all duration-300 flex items-center ml-2"
+            >
+              contact me.
+            </Link>
             </p>
           </div>
-          <div className="w-full md:w-1/2 md:px-6 md:mt-0 mt-6 flex flex-col">
+          <div className="w-full md:w-1/2 md:px-6 md:mt-0 mt-16 flex flex-col">
             <h2 className="text-slate-50 text-[22px] text-center md:pr-36 font-semibold tracking-[2px]">
               Front End
             </h2>

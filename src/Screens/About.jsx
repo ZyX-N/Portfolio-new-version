@@ -20,12 +20,12 @@ const About = () => {
     "MySQL",
     "MongoDB",
     "PHP",
-    "AJAX"
+    "AJAX",
   ];
 
   const [loading, setLoading] = useState(true);
 
-  document.title = "Me, Myself & I | AV";
+  // document.title = "Me, Myself & I | AV";
 
   useEffect(() => {
     setTimeout(() => {
@@ -64,28 +64,26 @@ const About = () => {
               )}
             </h1>
             <p className="text-slate-50 mt-4 pr-0 md:pr-10 text-justify md:text-left">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum,
-              ea adipisci voluptate modi illo ipsam beatae praesentium!
-              Consequatur, obcaecati sapiente!
+              I’m a Full-Stack Developer located in India. I have a serious
+              passion for UI effects, animations and creating intuitive, dynamic
+              user experiences with a perfect database management connection.
             </p>
             <p className="text-slate-50 mt-4 pr-0 md:pr-10 text-justify md:text-left">
-              Sapiente vero esse libero? Cum doloremque iusto sapiente debitis
-              in nemo ut assumenda, earum itaque facere a nobis sequi labore ea
+              A software developer who is pursuing his studies with job and freelancing and also an independent employee with high attention to detail. Curious for cricket, cosmology and free verse.
             </p>
             <p className="text-slate-50 my-4 pr-0 md:pr-10 text-justify md:text-left">
-              accusamus necessitatibus veniam distinctio id eum eveniet,
-              possimus alias expedita! Placeat eligendi quam ex modi illo
-              molestiae. Vel, explicabo?
+              Interesting in solving logical problem and working on ambitious projects with positive people.
             </p>
             <Link
-              to={"/blog"}
+              to={"/work"}
               className="text-[#14d9d8] hover:text-[15px] hover:text-[#06c2c2] absolute transition-all duration-300 flex items-center"
             >
-              Let’s make something special
+              {/* Let’s make something special */}
+              Have a look on my projects section
               <BsArrowRight className="animate-[wiggle_1s_ease-in-out_infinite]" />
             </Link>
           </div>
-          <div className="w-full flex justify-center md:w-[55%] mt-5 md:mt-0 lg:pl-0 xl:pl-10 overflow-x-hidden">
+          <div className="w-full flex justify-center md:w-[55%] mt-16 md:mt-0 lg:pl-0 xl:pl-10 overflow-x-hidden">
             <Globe data={skillGroup} radius={250} />
           </div>
           {/* <div className="w-full flex md:hidden justify-center md:w-[55%] mt-5 md:mt-0 lg:pl-0 xl:pl-10 overflow-x-hidden">
