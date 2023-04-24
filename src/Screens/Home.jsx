@@ -5,10 +5,11 @@ import Scrollbounce from "../Components/ScrollBouce";
 import About from "./About";
 import Skill from "./Skill";
 import Contact from "./Contact";
-import Work from "./Work";
 
 const Home = (props) => {
+
   const [loading, setLoading] = useState(true);
+  const [pageLast, setPageLast] = useState(false);
 
   useEffect(() => {
     setTimeout(() => {
@@ -23,13 +24,21 @@ const Home = (props) => {
     }, 1000);
   };
 
+  window.addEventListener('scroll',()=>{
+    if(window.pageYOffset > 2500){
+      setPageLast(true)
+    }else{
+      setPageLast(false)
+    }
+  })
+
   return (
     <section className="w-full relative">
       {loading ? (
         <Loading />
       ) : (
         <>
-        
+{pageLast === false && <> 
           <span
             className={`fixed bottom-4 ${
               props.open === true ? "left-36" : "left-0"
@@ -40,7 +49,7 @@ const Home = (props) => {
           <span className="fixed bottom-4 right-0">
             <Scrollbounce text="Scroll Down" textClass="text-white" />
           </span>
-
+          </>}
           <div className="w-full h-[600px] sm:h-screen flex items-center anim-bg">
             <div className="light x1"></div>
             <div className="light x2"></div>
@@ -111,14 +120,14 @@ const Home = (props) => {
               </p>
               <div className="flex mt-10">
                 <a
-                  href="./static/media/Aman's_Resume.pdf.pdf"
+                  href="./static/media/Aman's_Resume.pdf"
                   className="py-2 px-4 sm:py-3 sm:px-8 bg-transparent text-[#14d9d8] border-2 border-[#14d9d8] hover:bg-[#14d9d8] hover:text-[#1d1d1d] flex items-center justify-center transition-all duration-100 ease-in-out text-lg rounded-md cursor-pointer font-hind tracking-wider hover:scale-125"
                   download={true}
                 >
                   Resume
                 </a>
                 <a
-                  href="/"
+                  href="/contact"
                   className="py-2 px-4 sm:py-3 sm:px-8 bg-transparent text-[#14d9d8] border-2 border-[#14d9d8] hover:bg-[#14d9d8] hover:text-[#1d1d1d] flex items-center justify-center transition-all duration-300 ease-in-out text-lg rounded-md cursor-pointer ml-7 font-hind tracking-wider hover:scale-125"
                 >
                   Hire me

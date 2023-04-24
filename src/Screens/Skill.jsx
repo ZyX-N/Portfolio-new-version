@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { BsArrowRight } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import Bouncingword from "../Components/Bouncingword";
 import Loading from "../Components/Loading";
