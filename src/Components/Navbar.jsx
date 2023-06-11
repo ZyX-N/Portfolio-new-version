@@ -45,13 +45,13 @@ const Navbar = (props) => {
         </ul>
 
         <div className="flex flex-wrap mt-16 w-full justify-center text-gray-400">
-          <a href="https://www.linkedin.com/in/aman-verma-81121222a/" className="mx-2.5">
+          <a href="https://www.linkedin.com/in/aman-verma-4b1681209/" target="_blank" className="mx-2.5">
             <FaLinkedinIn className="text-lg hover:text-[#14d9d8]" />
           </a>
-          <a href="https://github.com/ZyX-N" className="mx-2.5">
+          <a href="https://github.com/ZyX-N" target="_blank" className="mx-2.5">
             <AiFillGithub className="text-lg hover:text-[#14d9d8]" />
           </a>
-          <a href="https://www.instagram.com/known__as__aman/" className="mx-2.5">
+          <a href="https://www.instagram.com/known_as_aman/" target="_blank" className="mx-2.5">
             <AiOutlineInstagram className="text-lg hover:text-[#14d9d8]" />
           </a>
         </div>
