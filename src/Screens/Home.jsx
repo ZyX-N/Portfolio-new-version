@@ -142,7 +142,7 @@ const Home = (props) => {
           <div className="w-full pb-5 pt-10">
             <Skill />
           </div>
-          <div className="w-full pb-10">
+          <div className="w-full py-20">
             <Contact />
           </div>
         </>
