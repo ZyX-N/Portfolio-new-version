@@ -48,7 +48,7 @@ const Navbar = (props) => {
           <a href="https://www.linkedin.com/in/aman-verma-4b1681209/" target="_blank" className="mx-2.5">
             <FaLinkedinIn className="text-lg hover:text-[#14d9d8]" />
           </a>
-          <a href="https://github.com/ZyX-N" target="_blank" className="mx-2.5">
+          <a href="https://github.com/known-as-aman" target="_blank" className="mx-2.5">
             <AiFillGithub className="text-lg hover:text-[#14d9d8]" />
           </a>
           <a href="https://www.instagram.com/known_as_aman/" target="_blank" className="mx-2.5">
