@@ -6,7 +6,7 @@ import Loading from "../Components/Loading";
 const Skill = () => {
   const [loading, setLoading] = useState(true);
 
-  //   document.title = "Me, Myself & I | AV";
+    
 
   useEffect(() => {
     setTimeout(() => {

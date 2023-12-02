@@ -11,7 +11,9 @@ const About = () => {
     "CSS",
     "Bootstrap",
     "Tailwind CSS",
+    "Material UI",
     "Javascript",
+    "Typescript",
     "ReactJS",
     "NextJS",
     "JQuery",
@@ -19,13 +21,14 @@ const About = () => {
     "ExpressJS",
     "MySQL",
     "MongoDB",
+    "DJango",
     "PHP",
     "AJAX",
   ];
 
   const [loading, setLoading] = useState(true);
 
-  // document.title = "Me, Myself & I | AV";
+  
 
   useEffect(() => {
     setTimeout(() => {
@@ -41,7 +44,7 @@ const About = () => {
   };
 
   return (
-    <section className="w-full md:h-screen relative">
+      <section className="w-full md:h-[calc(100vh-60px)] relative">
       {loading ? (
         <Loading />
       ) : (
