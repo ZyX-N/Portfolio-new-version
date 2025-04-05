@@ -4,11 +4,11 @@ import { BsArrowRight } from "react-icons/bs";
 const ProjectCard = (props) => {
   return (
     <div className="flex flex-col p-2 w-full sm:w-72 md:h-[420px] rounded-md bg-[#2b2b2b] border border-slate-50">
-      <div className="w-full overflow-hidden">
+      <div className="w-full overflow-hidden bg-white">
         <img
           src={props.data.image}
           alt="AMAN"
-          className="w-full h-full sm:h-52 sm:w-72 object-cover rounded-md border border-slate-50 hover:scale-105 transition-all duration-300 ease-in-out"
+          className="w-full h-full sm:h-52 sm:w-72 object-contain rounded-md border border-slate-50 hover:scale-105 transition-all duration-300 ease-in-out"
         />
       </div>
 
